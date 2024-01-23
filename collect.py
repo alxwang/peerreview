@@ -1,5 +1,3 @@
-from openpyxl import Workbook
-from openpyxl import load_workbook
 from argparse import ArgumentParser
 from argparse import RawTextHelpFormatter
 import os
@@ -7,6 +5,14 @@ import sys
 import platform
 from pathlib import Path
 import pprint
+import numpy as np
+from openpyxl.styles import NamedStyle, Font, Border, Side, Color, PatternFill, Alignment
+from openpyxl.utils import get_column_letter
+from openpyxl import Workbook
+from openpyxl import load_workbook
+from utils import *
+
+
 def parse_arg():
     parser = ArgumentParser(description="Collect peer review files.",formatter_class=RawTextHelpFormatter,
                             epilog=     "Example：\n"
