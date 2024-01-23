@@ -24,8 +24,8 @@ def get_columns(srcfile: str) -> (np.ndarray, dict):
                 students_in_group.append(student)
                 for cell in row:
                     student.append(cell.value)
-            print(f"Students in {ws.title}:")
-            pprint.pprint(students_in_group)
+            # print(f"Students in {ws.title}:")
+            # pprint.pprint(students_in_group)
     return columns, students_groups
 
 if __name__ == '__main__':
